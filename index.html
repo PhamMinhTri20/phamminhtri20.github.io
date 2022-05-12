@@ -127,6 +127,34 @@ nav{
 #main-menu .sub-menu>li.has-child:hover::after{
     color: crimson;
 }
+#TK{
+    border-radius: 50%;
+}
+#search-box{
+            background: #fff;
+            border-radius: 30px;
+        }
+        #search-box #search-text{
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 18px;
+            width: 0;
+            padding: 0;
+            transition: all 0.25s ease-in-out;
+        }
+        #search-box #search-text, #search-box #search-text:valid{
+            width: 150px;
+            /* padding: 10px 0px 10px 15px; */
+        }
+        #search-box #search-btn{
+            background-color: rgb(255, 255, 255);
+            cursor: pointer;
+            border: none;
+            /* padding: 10px; */
+            border-radius: 50%;
+            font-size: 18px;
+        }
     </style>
 </head>
 
@@ -158,6 +186,10 @@ nav{
                         </li>
                     </ul>
                     <li><a href="https://www.facebook.com/Hi.Im.Mr.Trii">Facebook</a></li>
+                    <li><br><form action="" id="search-box">
+                        <input type="text" id="search-text"placeholder="Bạn muốn tìm gì?" required>
+                        <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form></li>
                 </nav>
 
             </div>
