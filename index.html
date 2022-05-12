@@ -4,102 +4,178 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Hello</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="Css/reset.css">
+    <link rel="stylesheet" href="Css/app.css">
+    <title>menu</title>
     <style>
-            h1:hover{
-                color: red;
-            }
-            *{
-                padding: 0;
-                margin: 0;
-            }
+        body {
+   background-image: url('https://www.lg.com/vn/images/FN6/AV-TONEFree-FN6-29-Selectable-Colors-Desktop.jpg');
+   background-size: cover;
+   background-position-y: -100px;
+   display: block;
+    margin: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+.container{
+    max-width: 960px;
+    margin: 0px auto;
+}
+  #header{
+      background-color: #131921;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
+#logo{
+    padding: 5px 0px;
+}
+#logo img{
+    max-width: 50px;
+    height: auto;
+}
 
-            ul {
-                list-style: none;  
-            }
-            body{
-                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                line-height: 1.2;
-                color: #333
-            }
-            #wrapper {
-                height: 100vh;
-                display: flex;
-                justify-content: center;
-            }
-            nav {
-                 margin-top: 30px;
-            }
-            ul#main-menu {
-                display: flex;
-            }
-            ul#main-menu li{
-                padding: 0px 20px;
-            }
-            ul#main-menu a{
-                display: block;
-                padding: 15px 0px;
-                text-transform: uppercase;
-                font-weight: bold;
-                text-decoration: none;
-                color: #333;
-                position: relative;
-            }
-            ul#main-menu a::after{
-                content: "";
-                height: 5px;
-                width: 0px;
-                background: tomato;
-                position: absolute;
-                bottom: 0px;
-                left: 0;
-                transition: all 0.5s ease-in-out;
-            }
-            ul#main-menu a:hover:after{
-                width: 50%;
-                transform: translateX(100%);
-            }
-        </style>
+#main-menu{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#main-menu li{
+    position: relative;
+}
+#main-menu li a{
+    color: #f8f8f8;
+    display: block;
+    padding: 18px 20px;
+    text-decoration: none;
+}
+#main-menu ul.sub-menu{
+    position: absolute;
+    background-color: #131921;
+    padding: 15px 0px;
+    list-style: none;
+    width: 200px;
+    border: 1px solid #1a17173;
+    display: none;
+}
+#main-menu li:hover>ul.sub-menu{
+    display: block;
+}
+#main-menu ul.sub-menu a{
+    padding: 8px 15px;
+    border: 1px solid #d3cbff;
+    left: 0;
+}
+#main-menu ul.sub-menu li:hover>a{
+    border-bottom: 1px solid #6e6e6e;
+}
+#main-menu ul.sub-menu li:last-child a{
+    border: none;
+}
+#main-menu ul.sub-menu ul.sub-menu{
+    left: 200px;
+    top
+    : -15px;
+}
+#main-menu>li>a{
+    position: relative;
+}
+#main-menu>li>a::before{
+    content: "";
+    height: 4px;
+    width: 0px;
+    background: #f00;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#main-menu>li:hover>a::before{
+    width: 100%;
+}
+#main-menu>li.has-child::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f107";
+    color: #858585;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 18px 0px;
+}
+#main-menu .sub-menu li:hover>a{
+    color: crimson;
+}
+#main-menu .sub-menu>li.has-child::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f105";
+    color: #858585;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    padding: 8px 0px; 
+}
+#main-menu .sub-menu>li.has-child:hover::after{
+    color: crimson;
+}
+    </style>
 </head>
 
-    <body>
-        <header>
-        <style>
-            body {
-              background-image: url('https://24hstore.vn/upload_images/images/2019/11/14/anh-gif-3-min.gif');
-              background-repeat: no-repeat;
-              background-attachment: fixed;
-              background-size: 100% 100%;
-            }
-        </style>
-            <h1><marquee>Welcome To Website For Me</marquee></h1>
-        
+<body>
+    <header>
+
         <div id="wrapper">
-            <nav>
-                <ul id="main-menu">
-                    <li><a href="#">Trang chủ</a></li>
-                    <li><a href="https://phamminhtri20.github.io/gioi-thieu.html">Giới thiệu</a></li>
-                    <li><a href="https://phamminhtri20.github.io/page1.html">Review book</a></li>
+            <div id="header">
+                <nav class="container">
+                    <a href="" id="logo">
+                        <img src="https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.15752-9/279521716_345027754394857_1818184818326724771_n.png?_nc_cat=105&ccb=1-6&_nc_sid=ae9488&_nc_ohc=SjF8133ceiUAX865gXl&_nc_ht=scontent.fsgn2-1.fna&oh=03_AVKU0ZZ7kuC8uUKE3E3H9vKZIGs58JA-Ps8RlfEfAxXFww&oe=62A10982" alt="Unitop.vn">
+                    </a>
+                    <ul id="main-menu">
+                        <li><a href="">Trang Chủ</a></li>
+                        <li><a href="https://phamminhtri20.github.io/gioi-thieu.html">Giới Thiệu</a></li>
+                        <li><a href="">Bài Tập</a>
+                            <ul class="sub-menu">
+                                <li><a href="">HTML</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="https://phamminhtri20.github.io/page1.html">Review Book</a></li>
+                                </li>
+                            </ul>
+                        </li>           
+                        <li><a href="">CSS</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Search Box</a></li>
+                        </li>
+                    </ul>
+                        </li>
+                    </ul>
                     <li><a href="https://www.facebook.com/Hi.Im.Mr.Trii">Facebook</a></li>
-                    <li><a href="#">Bài Tập</a></li>
-                    <li><a href="https://phamminhtri20.github.io/search.html">Search Box</a></li>
-                    <li>&nbsp;<form action="" id="search-box">
-                    <input type="text" id="search-text"
-                        placeholder="Bạn muốn tìm gì?"
-                        required>
-                    <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </ul>
-            </nav>
+                </nav>
+
+            </div>
+            <!--<div id="wp-content">
+            </div>
+            <div id="footer">
+            </div> -->
         </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.sub-menu').parent('li').addClass('has-child');
+            });
+        </script>
     </header>
+    <section>
+            
+    </section>
+    <footer>
 
-     <section>
-            <img src="" alt="">
-     </section>
-
-     <footer>
-
-     </footer>
-    </body>
+    </footer>
+</body>
 </html>
