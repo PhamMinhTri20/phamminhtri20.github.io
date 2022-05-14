@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Hello</title>
     <style>
-        body {
+body {
     background-image: url('https://www.lg.com/vn/images/FN6/AV-TONEFree-FN6-29-Selectable-Colors-Desktop.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -18,7 +18,7 @@
     margin-right: 0px;
     margin-bottom: 0px;
     margin-left: 0px;
-  }
+}
 .container{
     max-width: 960px;
     margin: 0px auto;
@@ -60,7 +60,7 @@ nav{
     padding: 15px 0px;
     list-style: none;
     width: 200px;
-    border: 1px solid #1a17173;
+    border: 1px solid;
     display: none;
 }
 #main-menu li:hover>ul.sub-menu{
@@ -88,7 +88,7 @@ nav{
     content: "";
     height: 4px;
     width: 0px;
-    background: #f00;
+    background: rgb(9, 255, 0);
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -124,28 +124,33 @@ nav{
     color: crimson;
 }
 #search-box{
-            background: #fff;
-            border-radius: 30px;
-        }
-        #search-box #search-text{
-            border: none;
-            outline: none;
-            background: none;
-            font-size: 18px;
-            width: 0;
-            padding: 0;
-            transition: all 0.25s ease-in-out;
-        }
-        #search-box #search-text, #search-box #search-text:valid{
-            width: 150px;
-        }
-        #search-box #search-btn{
-            background-color: rgb(255, 255, 255);
-            cursor: pointer;
-            border: none;
-            border-radius: 50%;
-            font-size: 18px;
-        }
+    background: #fff;
+    border-radius: 30px;
+}
+#search-box #search-text{
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    width: 0;
+    padding: 0;
+    transition: all 0.25s ease-in-out;
+}
+#search-box #search-text, #search-box #search-text:valid{
+    width: 150px;
+    }
+#search-box #search-btn{
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+}
+@media only screen and (max-width: 600px) {
+    body{
+        background-image: url('https://tiemanhsky.com/wp-content/uploads/2020/06/anh-nghe-thuat-trang-den-2-819x1024.jpg');
+    }
+}
     </style>
 </head>
 
@@ -156,7 +161,7 @@ nav{
             <div id="header">
                 <nav class="container">
                     <a href="" id="logo">
-                        <img src="https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.15752-9/279521716_345027754394857_1818184818326724771_n.png?_nc_cat=105&ccb=1-6&_nc_sid=ae9488&_nc_ohc=SjF8133ceiUAX865gXl&_nc_ht=scontent.fsgn2-1.fna&oh=03_AVKU0ZZ7kuC8uUKE3E3H9vKZIGs58JA-Ps8RlfEfAxXFww&oe=62A10982" alt="Image-logo">
+                        <img src="https://scontent.fdad1-2.fna.fbcdn.net/v/t1.15752-9/279415069_421397796482135_5405203816598297310_n.png?_nc_cat=105&ccb=1-6&_nc_sid=ae9488&_nc_ohc=KAGmrA6tv-MAX-FK5AN&_nc_ht=scontent.fdad1-2.fna&oh=03_AVIz6TD-S-7W6XSk_LWoz6osKfoD4nPGfxFp8Tytal7d5g&oe=62A44F2E" alt="Image-logo">
                     </a>
                     <ul id="main-menu">
                         <li><a href="">Trang Chủ</a></li>
