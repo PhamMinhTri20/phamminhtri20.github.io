@@ -5,176 +5,214 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>Profile</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <title>Home</title>
     <style>
-        body {
-    background-image: url('https://th.bing.com/th/id/R.7e7e0265cfcbcd3d008d5959da02c0bc?rik=G%2ft33plpJ23vLA&pid=ImgRaw&r=0');
+body {
+    background-image: url('https://www.lg.com/vn/images/FN6/AV-TONEFree-FN6-29-Selectable-Colors-Desktop.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
+    display: block;
+    margin: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
 }
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  font-family: 'Josefin Sans', sans-serif;
+.container{
+    max-width: 960px;
+    margin: 0px auto;
 }
-
-body{
-   background-color: #f3f3f3;
+  #header{
+    background-color: #131921;
 }
-
-.wrapper{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 700px;
-  display: flex;
-  box-shadow: 0 1px 20px 0 rgba(69,90,100,.08);
+nav{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
 }
-
-.wrapper .left{
-  width: 35%;
-  background: linear-gradient(to right,#000000,#7e7878);
-  padding: 30px 25px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  text-align: center;
-  color: #fff;
+#logo{
+    padding: 5px 0px;
+}
+#logo img{
+    max-width: 50px;
+    height: auto;
 }
 
-.wrapper .left img{
-  border-radius: 5px;
-  margin-bottom: 10px;
+#main-menu{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
-
-.wrapper .left h4{
-  margin-bottom: 10px;
+#main-menu li{
+    position: relative;
 }
-
-.wrapper .left p{
-  font-size: 12px;
+#main-menu li a{
+    color: #f8f8f8;
+    display: block;
+    padding: 18px 20px;
+    text-decoration: none;
 }
-
-.wrapper .right{
-  width: 65%;
-  background: #fff;
-  padding: 30px 25px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+#main-menu ul.sub-menu{
+    position: absolute;
+    background-color: #131921;
+    padding: 15px 0px;
+    list-style: none;
+    width: 200px;
+    border: 1px solid;
+    display: none;
 }
-
-.wrapper .right .info,
-.wrapper .right .projects{
-  margin-bottom: 25px;
+#main-menu li:hover>ul.sub-menu{
+    display: block;
 }
-
-.wrapper .right .info h3,
-.wrapper .right .projects h3{
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #e0e0e0;
-    color: #353c4e;
-  text-transform: uppercase;
-  letter-spacing: 5px;
+#main-menu ul.sub-menu a{
+    padding: 8px 15px;
+    border: 1px solid #d3cbff;
+    left: 0;
 }
-
-.wrapper .right .info_data,
-.wrapper .right .projects_data{
-  display: flex;
-  justify-content: space-between;
+#main-menu ul.sub-menu li:hover>a{
+    border-bottom: 1px solid #6e6e6e;
 }
-
-.wrapper .right .info_data .data,
-.wrapper .right .projects_data .data{
-  width: 45%;
+#main-menu ul.sub-menu li:last-child a{
+    border: none;
 }
-
-.wrapper .right .info_data .data h4,
-.wrapper .right .projects_data .data h4{
-    color: #353c4e;
-    margin-bottom: 5px;
+#main-menu ul.sub-menu ul.sub-menu{
+    left: 200px;
+    top : -15px;
 }
-
-.wrapper .right .info_data .data p,
-.wrapper .right .projects_data .data p{
-  font-size: 13px;
-  margin-bottom: 10px;
-  color: #919aa3;
+#main-menu>li>a{
+    position: relative;
 }
-
-.wrapper .social_media ul{
-  display: flex;
+#main-menu>li>a::before{
+    content: "";
+    height: 4px;
+    width: 0px;
+    background: rgb(9, 255, 0);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
-.wrapper .social_media ul li{
-  width: 45px;
-  height: 45px;
-  background: linear-gradient(to right,#000000,#ffffff);
-  margin-right: 10px;
-  border-radius: 5px;
-  text-align: center;
-  line-height: 45px;
+#main-menu>li:hover>a::before{
+    width: 100%;
 }
-
-.wrapper .social_media ul li a{
-  color :#fff;
-  display: block;
-  font-size: 18px;
+#main-menu>li.has-child::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f107";
+    color: #858585;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 18px 0px;
 }
+#main-menu .sub-menu li:hover>a{
+    color: crimson;
+}
+#main-menu .sub-menu>li.has-child::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f105";
+    color: #858585;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    padding: 8px 0px; 
+}
+#main-menu .sub-menu>li.has-child:hover::after{
+    color: crimson;
+}
+#search-box{
+    background: #fff;
+    border-radius: 30px;
+}
+#search-box #search-text{
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    width: 0;
+    padding: 0;
+    transition: all 0.25s ease-in-out;
+}
+#search-box #search-text, #search-box #search-text:valid{
+    width: 150px;
+    }
+#search-box #search-btn{
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+}
+#toggle {
+        display: none;
+        background: #131921;
+        color: #fff;
+        text-align: right;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    @media screen and (max-width: 768px) {
+        #main-menu {
+            flex-direction: column;
+            text-align: center;
+        }
+        #toggle {
+            display: block;
+        }
+        nav {
+            display: none;
+        }
+    }
+</style>
+    <script>
+        $(document).ready(function() {
+            $('#toggle').click(function() {
+                $('nav').slideToggle();
+            });
+        })
+    </script>
     </style>
 </head>
-<body>
-    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
-        <div class="wrapper">
-            <div class="left">
-                <img src="https://avatars.githubusercontent.com/u/103323420?v=4" alt="user" width="100">
-                <h4>Phạm Minh Trí</h4>
-                 <p>CD-CNTT15B</p>
-            </div>
-            <div class="right">
-                <div class="info">
-                    <h3>Information</h3>
-                    <div class="info_data">
-                         <div class="data">
-                            <h4>Phone</h4>
-                            <p>0326-xXx-xXx</p>
-                         </div>
-                         <div class="data">
-                           <h4>Email</h4>
-                            <p>phamminhtridelicacy@gmail.com</p>
-                      </div>
-                      
-                    </div>
+<body>
+    <header>
+        <div id="wrapper">
+            <div id="header">
+                <div id="toggle">
+                    <i class="fas fa-bars"></i>
                 </div>
-              
-              <div class="projects">
-                    <h3>Projects</h3>
-                    <div class="projects_data">
-                         <div class="data">
-                            <h4>Recent</h4>
-                            <p>Web Programming</p>
-                         </div>
-                         <div class="data">
-                           <h4>Plan</h4>
-                            <p>Web Design</p>
-                      </div>
-                    </div>
-                </div>
-              
-                <div class="social_media">
-                    <ul>
-                      <li><a href="https://facebook.com/Hi.Im.Mr.Trii"><i class="fab fa-facebook-f"></i></a></li>
-                      <li><a href="https://phamminhtri20.github.io/trangchu.html"><i class="fa-brands fa-github"></i></a></li>
-                      <li><a href="https://www.instagram.com/pmt_0111/"><i class="fab fa-instagram"></i></a></li>
-                  </ul>
-              </div>
+                <nav class="container">
+                    <a href="" id="logo">
+                        <img src="https://scontent.fdad1-2.fna.fbcdn.net/v/t1.15752-9/279415069_421397796482135_5405203816598297310_n.png?_nc_cat=105&ccb=1-6&_nc_sid=ae9488&_nc_ohc=KAGmrA6tv-MAX-FK5AN&_nc_ht=scontent.fdad1-2.fna&oh=03_AVIz6TD-S-7W6XSk_LWoz6osKfoD4nPGfxFp8Tytal7d5g&oe=62A44F2E" alt="Image-logo">
+                    </a>
+                    <ul id="main-menu">
+                        <li><a href="https://phamminhtri20.github.io/trangchu.html">HOME</a></li>
+                        <li><a href="https://phamminhtri20.github.io/learn.html">LEARN</a></li>
+                    <li><br><form action="" id="search-box">
+                        <input type="text" id="search-text"placeholder="Bạn muốn tìm gì?" required>
+                        <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form></li>
+                </nav>
+
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.sub-menu').parent('li').addClass('has-child');
+            });
+        </script>
+    </header>
+    <section>
+
+    </section>
+    <footer>
+
+    </footer>
 </body>
 </html>
