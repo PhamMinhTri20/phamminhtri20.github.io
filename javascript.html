@@ -19,7 +19,8 @@ body{
 
 h1{
     font-family: 'Courier New', Courier, monospace;
-    text-align: center;   
+    text-align: center;
+    color: black;
 }
 
 #noidung{
@@ -41,67 +42,63 @@ h1{
     justify-content: center;
 }
 
-@import url(https://fonts.googleapis.com/css?family=BenchNine:700);
-.but{
-    background-color: #c47135;
-    border: none;
-    color: #ffffff;
+.button-56 {
+    align-items: center;
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
     cursor: pointer;
-    display: inline-block;
-    font-family: 'BenchNine', Arial, sans-serif;
-    font-size: 1em;
-    font-size: 22px;
-    line-height: 1em;
-    margin: 15px 40px;
-    outline: none;
-    padding: 12px 40px 10px;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
     position: relative;
-    text-transform: uppercase;
-    font-weight: 700;
-    height: 50px;
-}
-button.margin-right {
-    margin-right: 20px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-right: 50px;
 }
 
-.but:before,
-.but:after {
-  border-color: transparent;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  border-style: solid;
-  border-width: 0;
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
   content: "";
-  height: 24px;
-  position: absolute;
-  width: 24px;
-}
-
-.but:before {
-  border-color: #c47135;
-  border-top-width: 2px;
-  left: 0px;
-  top: -5px;
-}
-
-.but:after {
-  border-bottom-width: 2px;
-  border-color: #c47135;
-  bottom: -5px;
-  right: 0px;
-}
-
-.but:hover,
-.but.hover {
-  background-color: #c47135;
-}
-
-.but:hover:before,
-.but.hover:before,
-.but:hover:after,
-.but.hover:after {
-  height: 100%;
+  display: block;
+  height: 48px;
+  left: 0;
   width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
 }
 
 </style>
@@ -113,11 +110,11 @@ button.margin-right {
         <p id="noidung"></p>
     </div>  
     <div class="toanbo nut">
-            <button class="but" type="hienthi margin-right" onclick="hienthi()">Hiển thị </button>
+            <button class="button-56" role="button" type="hienthi margin-right" onclick="hienthi()">Hiển thị </button>
 
-            <button class="but" type="tinhtong margin-right" onclick="tinhtong()">Tính tổng</button>
+            <button class="button-56" role="button" type="tinhtong margin-right" onclick="tinhtong()">Tính tổng</button>
 
-            <button class="but" type="tinhtongchan" onclick="tinhtongchan()">Tính tổng chẵn</button>
+            <button class="button-56" role="button" type="tinhtongchan" onclick="tinhtongchan()">Tính tổng chẵn</button>
     </div>                          
     <script>
             function hienthi() {
