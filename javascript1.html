@@ -201,17 +201,27 @@ button:hover::after, button:focus::after {
         <script>
           function hienthi() {
 // Giới thiệu tên
-            document.getElementById("noidung").innerHTML = "Xin chao. Toi là " + document.forms["myForm"].textname.value;
+            document.getElementById("noidung").innerHTML = "Xin chào! Tôi là : " + document.forms["myForm"].textname.value;
           }
-         function tinhtong() {
-              //Tính tổng từ 1 -> n
-document.getElementById("noidung").innerHTML ="Tổng từ 1 đến " +  document.forms["myForm"].n.value + " là: ";
-          }
-        function tinhtongchan() {
-              //Tính tổng các số chẳn từ 1 -> n
-document.getElementById("noidung").innerHTML ="Tổng các số chẵn từ 1 đến " +  document.forms["myForm"].n.value + " là: ";
-          }
+          function tinhtong() {
+                  //Tính tổng từ 1 -> n
+                  let text =0;
+                  for( let i=1 ; i<=document.forms["myForm"].n.value;i++){
+                       text +=i;
+                  }
+	document.getElementById("noidung").innerHTML ="Tổng từ 1 đến " +  document.forms["myForm"].n.value + " là: "+text;
+              }
+            function tinhtongchan() {
+                  //Tính tổng các số chẳn từ 1 -> n
+                  let text =0;
+                  for( let i=1 ; i<=document.forms["myForm"].n.value;i++){
+                    if(i%2==0){
+                       text +=i;
+                  }
+                }
+                  
+	document.getElementById("noidung").innerHTML ="Tổng các số chẵn từ 1 đến " +  document.forms["myForm"].n.value + " là: "+text;
+              }
         </script>    
      </body>
 </html>
-  
