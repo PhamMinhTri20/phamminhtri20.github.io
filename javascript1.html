@@ -13,7 +13,7 @@ body{
 	font-family: 'Noto Sans', sans-serif;
 }
 h1{
-    font-family:cursive;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 label{
     font-family: cursive;
@@ -105,7 +105,7 @@ label{
   font-weight: 700;
   color: #313133;
   background: #4FD1C5;
-background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
   border: none;
   border-radius: 1000px;
   box-shadow: 12px 12px 24px rgba(79,209,197,.64);
@@ -172,6 +172,16 @@ button:hover::after, button:focus::after {
   }
 }
 
+@media screen and (max-width: 985px){
+  .wrap {
+    display: block;
+    text-align: center;
+}
+.g{
+  margin: 15px;
+}
+}
+
 </style>
     </head>
     <body>
@@ -192,11 +202,11 @@ button:hover::after, button:focus::after {
        </form>
         <p id="noidung"></p>
         <div class="wrap">
-            <button class="button" type="hienthi margin-right" onclick="hienthi()">Hiển thị </button>
+            <button class="button g" type="hienthi margin-right" onclick="hienthi()">Hiển thị </button>
             
-            <button class="button" type="tinhtong margin-right" onclick="tinhtong()">Tính tổng</button>
+            <button class="button g" type="tinhtong margin-right" onclick="tinhtong()">Tính tổng</button>
             
-            <button class="button" type="tinhtongchan" onclick="tinhtongchan()">Tính tổng chẵn</button>
+            <button class="button g" type="tinhtongchan" onclick="tinhtongchan()">Tính tổng chẵn</button>
         </div>
 
         <script>
