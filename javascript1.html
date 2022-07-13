@@ -43,7 +43,7 @@ label{
 	left:50%;
 	top:50%;
 	transform: translate(-50%,-50%);
-    background-color: rgba(0, 0, 0, 0.89);
+  background-color: rgba(0, 0, 0, 0.89);
 	border-radius:3px;
 	padding:70px 100px;
 }
@@ -176,7 +176,9 @@ button:hover::after, button:focus::after {
 </style>
     </head>
     <body>
+      <div>
         <h1>Bài tập JavaScript</h1><br>
+      </div>
 
         <form id="myForm" action="">
         <span class="text-center">Vui lòng nhập giá trị sau : </span>
@@ -200,11 +202,11 @@ button:hover::after, button:focus::after {
 
         <script>
           function hienthi() {
-// Giới thiệu tên
-            document.getElementById("noidung").innerHTML = "Xin chào! Tôi là : " + document.forms["myForm"].textname.value;
+          const value = document.forms["myForm"].textname.value
+          if (!value) alert("Vui lòng nhập đầy đủ nội dung")
+          else document.getElementById("noidung").innerHTML = "Xin chào! Tôi là : " + value;
           }
           function tinhtong() {
-                  //Tính tổng từ 1 -> n
                   let text =0;
                   for( let i=1 ; i<=document.forms["myForm"].n.value;i++){
                        text +=i;
@@ -212,7 +214,6 @@ button:hover::after, button:focus::after {
 	document.getElementById("noidung").innerHTML ="Tổng từ 1 đến " +  document.forms["myForm"].n.value + " là: "+text;
               }
             function tinhtongchan() {
-                  //Tính tổng các số chẳn từ 1 -> n
                   let text =0;
                   for( let i=1 ; i<=document.forms["myForm"].n.value;i++){
                     if(i%2==0){
@@ -225,3 +226,4 @@ button:hover::after, button:focus::after {
         </script>    
      </body>
 </html>
+  
