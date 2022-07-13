@@ -172,7 +172,6 @@ button:hover::after, button:focus::after {
   }
 }
 
-
 </style>
     </head>
     <body>
@@ -184,7 +183,7 @@ button:hover::after, button:focus::after {
         <span class="text-center">Vui lòng nhập giá trị sau : </span>
         <div class="input-container">
         <input id="textbox1" name="textname" required="" type="text" /></p>
-        <label>Vui lòng nhập tên</label>
+        <label>Nhập tên</label>
         </div>
         <div class="input-container">
             <input id="textbox2" name="n" required="" type="text" /></p>
@@ -203,7 +202,7 @@ button:hover::after, button:focus::after {
         <script>
           function hienthi() {
           const value = document.forms["myForm"].textname.value
-          if (!value) alert("Vui lòng nhập đầy đủ nội dung")
+          if (!value) alert("Vui lòng nhập tên")
           else document.getElementById("noidung").innerHTML = "Xin chào! Tôi là : " + value;
           }
           function tinhtong() {
@@ -211,17 +210,20 @@ button:hover::after, button:focus::after {
                   for( let i=1 ; i<=document.forms["myForm"].n.value;i++){
                        text +=i;
                   }
-	document.getElementById("noidung").innerHTML ="Tổng từ 1 đến " +  document.forms["myForm"].n.value + " là: "+text;
-              }
-            function tinhtongchan() {
+          const value = document.forms["myForm"].n.value
+          if (!value) alert("Vui lòng nhập n")
+	        else  document.getElementById("noidung").innerHTML ="Tổng từ 1 đến " +  document.forms["myForm"].n.value + " là: "+text;
+          }
+          function tinhtongchan() {
                   let text =0;
                   for( let i=1 ; i<=document.forms["myForm"].n.value;i++){
                     if(i%2==0){
                        text +=i;
                   }
                 }
-                  
-	document.getElementById("noidung").innerHTML ="Tổng các số chẵn từ 1 đến " +  document.forms["myForm"].n.value + " là: "+text;
+          const value = document.forms["myForm"].n.value
+          if (!value) alert("Vui lòng nhập n")      
+	        document.getElementById("noidung").innerHTML ="Tổng các số chẵn từ 1 đến " +  document.forms["myForm"].n.value + " là: "+text;
               }
         </script>    
      </body>
